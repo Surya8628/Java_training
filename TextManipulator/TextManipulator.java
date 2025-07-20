@@ -23,5 +23,19 @@ public class TextManipulator {
         writer.close();
 
         System.out.println("Line appended successfully!");
+
+        System.out.println("Verifying the updated file contents:");
+
+        Scanner verifyScanner = new Scanner(file);
+        while (verifyScanner.hasNextLine()) {
+            String line = verifyScanner.nextLine();
+            System.out.println(line);
+        }
+        verifyScanner.close();
+
+        inputScanner.close();
+        System.out.println("File manipulation completed successfully.");
+        
     }
+
 }
